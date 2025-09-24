@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Three.js Open World Explorer</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: radial-gradient(circle at top, #a0d8ef, #1e3c72);
+        color: #ffffff;
+      }
+
+      #overlay {
+        position: absolute;
+        top: 1.5rem;
+        left: 1.5rem;
+        max-width: 320px;
+        padding: 1.25rem 1.5rem;
+        border-radius: 14px;
+        background: rgba(5, 15, 32, 0.65);
+        backdrop-filter: blur(12px);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+        line-height: 1.5;
+      }
+
+      #overlay h1 {
+        margin: 0 0 0.5rem;
+        font-size: 1.5rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      #overlay p {
+        margin: 0.3rem 0;
+        font-size: 0.95rem;
+      }
+
+      #overlay .small {
+        font-size: 0.75rem;
+        opacity: 0.8;
+      }
+
+      #overlay.hidden {
+        opacity: 0;
+        transform: translateY(-20px);
+        pointer-events: none;
+        transition: all 0.6s ease;
+      }
+
+      canvas {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="overlay">
+      <h1>Aurora Isles</h1>
+      <p>Click to begin your expedition.</p>
+      <p>Move with <strong>WASD</strong>, sprint with <strong>Shift</strong>, and jump with <strong>Space</strong>.</p>
+      <p>Look around with your mouse once the pointer is locked.</p>
+      <p class="small">Explore the valleys, follow the lights, and find the warm campfires hidden across the islands.</p>
+    </div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
